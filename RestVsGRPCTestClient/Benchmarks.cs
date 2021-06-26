@@ -17,6 +17,7 @@ namespace RestVsGRPCTestClient
     // This contains BenchmarkDotNet performance tests
     //   https://benchmarkdotnet.org/
     [SimpleJob(RuntimeMoniker.Net50)]
+    [MarkdownExporter]
     public class Benchmarks
     {
         // server endpoints
