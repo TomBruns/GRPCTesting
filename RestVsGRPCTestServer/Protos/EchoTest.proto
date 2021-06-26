@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "RestVsGRPCTestServer";
+
+package EchoTest;
+
+service EchoTester {
+  // Echo the request
+  rpc Echo (EchoRequestDTO) returns (EchoResponseDTO);
+}
+
+// request message
+message EchoRequestDTO {
+    repeated BookDTO Books = 1;
+}
+
+// response message
+message EchoResponseDTO {
+    repeated BookDTO Books = 1;
+}
+
+message BookDTO {
+    string title = 1;
+    string author = 2;
+}
